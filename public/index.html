@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventário NTI</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">Login</button>
+    
+    <div id="login-section" style="display:none;">
+        <h2>Buscar Equipamentos</h2>
+        <input type="text" id="search" placeholder="Buscar">
+        <button onclick="searchEquipments()">Buscar</button>
+        <ul id="equipments-list"></ul>
+
+        <h2>Inserir Novo Equipamento</h2>
+        <input type="text" id="numero_patrimonio" placeholder="Número de Patrimônio">
+        <input type="text" id="modelo" placeholder="Modelo">
+        <input type="text" id="categoria" placeholder="Categoria">
+        <input type="date" id="data_insercao">
+        <button onclick="addEquipment()">Adicionar</button>
+    </div>
+
+    <div id="edit-section" style="display:none;">
+        <h2>Editar Equipamento</h2>
+        <input type="hidden" id="edit-id">
+        <input type="text" id="edit-numero_patrimonio" placeholder="Número de Patrimônio">
+        <input type="text" id="edit-modelo" placeholder="Modelo">
+        <input type="text" id="edit-categoria" placeholder="Categoria">
+        <input type="date" id="edit-data_insercao">
+        <button onclick="updateEquipment()">Salvar Alterações</button>
+        <button onclick="cancelEdit()">Cancelar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
